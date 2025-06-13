@@ -141,5 +141,5 @@ HelperClasses: contains datastructures relevant for the main implementations
 Statistic: contains tests to examine the error correction
 
 # References
-[1]: Sivan Leviyang, Igor Griva, Sergio Ita, and Welkin E Johnson. A penalized regression approach to haplotype reconstruction of viral populations arising in early hiv/siv
+[1]: Sivan Leviyang, Igor Griva, Sergio Ita, and Welkin E Johnson. A penalized regression approach to haplotype reconstruction of viral populations arising in early hiv/siv
 infection. Bioinformatics, 33(16):2455–2463, 2017. 
