@@ -1,9 +1,27 @@
-# Introduction to implementation
+# Introduction 
 
-This file serves to briefly explain which concepts can be called up 
-and how. It also explains what the output files stand for.
+HIV is a virus that can develop resistance to drugs due to its high mutation and replication capacity. 
+For this reason, it is essential to know which viral variants are present in
+the patient’s blood. This enables the identification of drugs that effectively prevent viral
+replication. A viral genome reconstruction concept based on penalized least-squares regression was 
+developed several years ago. In this bachelor thesis, we wanted to analyse this
+concept. For this purpose, we have tested the methodology on simulated data as well as
+on the 5-virus-mix dataset. We found that for paired-end reads with gaps, the concept
+suggests many false positive viral genomes. In the analysis, it was found that this occurred
+due to overfitting. To improve the performance, three suggestions were introduced in this
+thesis: increasing the tuning parameter ρ in the regression, a consistency check method and
+a scoring system. It could be observed that higher values for ρ in the regression formula led
+to a reduction in overfitting. The consistency check and the scoring system are based on the
+following observation: It seems that false positives have at the region around an erroneous
+nucleotide hardly any reads containing the same sequence. In our tests, the consistency
+check could thereby remove a high fraction of possible false haplotypes before optimisation.
+The scoring system gives a credibility score to the haplotypes suggested in the result. We
+noted that true positives received in majority higher scores than false positives
 
 ## Pipeline
+In the following paragraphs we present our code. Our method consists of 3 steps. In the first step, 
+the reads are corrected. Then the method of [1] is used to reconstruct the viral genomes. 
+In a final step, our own suggestions for improvement are applied.
 
 ### Format of File containing reads
 
@@ -115,6 +133,10 @@ defineScore: scoring system
 StageWiseRegression: computes the regression
 
 LagrangianRegression: computes the regression
+
+# References
+[1]: Sivan Leviyang, Igor Griva, Sergio Ita, and Welkin E Johnson. A penalized regression approach to haplotype reconstruction of viral populations arising in early hiv/siv
+infection. Bioinformatics, 33(16):2455–2463, 2017. 
 
 Experiment: computes the variants for the experiments
 
