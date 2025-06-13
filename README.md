@@ -3,7 +3,7 @@
 HIV is a virus that can develop resistance to drugs due to its high mutation and replication capacity. 
 For this reason, it is essential to know which viral variants are present in
 the patient’s blood. This enables the identification of drugs that effectively prevent viral
-replication. A viral genome reconstruction concept based on penalized least-squares regression was 
+replication. A viral genome reconstruction concept based on penalized least-squares regression was 
 developed several years ago. In this bachelor thesis, we wanted to analyse this
 concept. For this purpose, we have tested the methodology on simulated data as well as
 on the 5-virus-mix dataset. We found that for paired-end reads with gaps, the concept
